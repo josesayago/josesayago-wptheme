@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/**
+ * @Project: josesayago
+ * @Author: Jose SAYAGO
+ * @Email: hello@josesayago.com
+ * @URL: http://josesayago.com
+ * @Date:   2016-01-23 11:45:24
+ * @Last Modified by:   Jose SAYAGO
+ * @Last Modified time: 2016-01-23 12:29:55
+ * @File: frontend.scss
+ * @License: GLP v2
+ */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,600|Libre+Baskerville:400,700);
+.aligncenter {
+  margin: 0 auto;
+  text-align: center; }
+
+.alignright {
+  float: right; }
+
+a {
+  color: #86af99;
+  text-decoration: none; }
+
+a:hover,
+a:visited {
+  color: #fe4365;
+  text-decoration: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbfcfc;
+  font-family: 'Josefin Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif; }
+
+/**
+ * Site Header
+ */
+header {
+  background: #fe4365 url("../images/header-overlay.png") no-repeat center bottom;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  min-height: 649px; }
+
+.statement {
+  margin: 1em 0 0 0;
+  font-size: 120%;
+  color: #f8ccad;
+  text-transform: uppercase;
+  min-height: 45px; }
+
+.typed-cursor {
+  display: none; }
+
+.navbar-default {
+  background: transparent;
+  border: 0;
+  border-radius: 0; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #f8ccad; }
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fbfcfc; }
+
+.navbar-toggle {
+  border: 0; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f8ccad; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active,
+.navbar-default .navbar-toggle:focus {
+  background: transparent; }
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #86af99; }
+
+.navbar-search {
+  padding: 0 2em 0 0;
+  margin: -2.5em 0 0 0;
+  color: white;
+  cursor: pointer; }
+
+.navbar-search:hover {
+  color: #1e1e1e; }
+
+header .post-title {
+  text-align: center;
+  margin: 2em auto;
+  width: 60%;
+  border: 1px solid #f8ccad;
+  border-left: 0;
+  border-right: 0; }
+
+header .post-title h1 {
+  color: #f8ccad;
+  line-height: 1.5em;
+  font-size: 160%;
+  font-family: 'Libre Baskerville', sans-serif;
+  text-transform: uppercase; }
+
+.trusted-by {
+  text-align: center;
+  background: white;
+  padding: 5px 0 5px 0;
+  clear: both; }
+
+.trusted-by h2 {
+  color: rgba(30, 30, 30, 0.2);
+  text-transform: uppercase;
+  font-size: 115%;
+  margin: .5em 0 1em 0;
+  font-weight: bolder;
+  font-family: 'Josefin Sans', sans-serif; }
+
+.trusted-by ul {
+  list-style: none;
+  background: white;
+  display: block;
+  width: 100%;
+  clear: both; }
+
+.trusted-by ul li {
+  display: inline-table;
+  margin: 0 .3em;
+  background: white; }
+
+.trusted-by ul li img  {
+  display: inline-block; }
+
+.navbar .cta {
+  background: #da0129; }
+
+.navbar .cta a {
+  color: white !important;
+  font-weight: bolder; }
+
+.navbar .cta a:hover {
+  color: #1e1e1e !important; }
+
+/**
+ * Site Content
+ */
+.site-content {
+  padding: 0 2em; }
+
+.site-content a {
+  color: #86af99; }
+
+/**
+ * Article
+ */
+article {
+  padding: 0 2em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #1e1e1e;
+  display: inline-block;
+  width: 80%; }
+
+article blockquote {
+  font-size: 1.4em;
+  line-height: 2em;
+  font-style: italic;
+  color: #86af99;
+  border: 1px solid #86af99;
+  border-left: 0;
+  border-right: 0;
+  text-align: center; }
+
+article a {
+  color: #86af99;
+  border-bottom: 1px dotted #fe4365; }
+
+article a:hover {
+  text-decoration: none;
+  color: #fe4365;
+  border-bottom: 1px dotted #86af99; }
+
+.widget-area {
+  display: inline-block;
+  width: 16%;
+  border-left: 1px dashed #86af99;
+  padding: 0 1em;
+  vertical-align: top; }
+
+.widget-area li {
+  list-style: none; }
+
+.widget-area .search-form .screen-reader-text {
+  display: none; }
+
+.widget-area .search-form .search-field {
+  border: 1px solid #f8ccad;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  outline: none;
+  background: transparent;
+  padding: .5em;
+  color: #f8ccad; }
+
+.widget-area .search-form .search-field:focus {
+  border-color: #86af99;
+  color: #86af99; }
+
+.widget-area .search-form .search-submit {
+  background: #fe4365;
+  color: #f8ccad;
+  border: 0;
+  outline: none;
+  padding: .2em 1em;
+  text-align: center;
+  margin: 0 auto; }
+
+.widget-area .search-form .search-submit:hover,
+.widget-area .search-form .search-submit:focus {
+  outline: none;
+  background: #86af99;
+  color: white; }
+
+.single-template {
+  display: block; }
+
+figure.wp-caption {
+  border: 1px solid #f8ccad;
+  border-left: 0;
+  border-right: 0;
+  padding: 1em;
+  width: 100% !important;
+  margin: .5em 0; }
+
+.wp-caption img {
+  border: 0; }
+
+figure figcaption {
+  color: #86af99;
+  padding: 1em 0 0 0;
+  font-size: 90%; }
+
+figure figcaption:before {
+  content: "< ";
+  font-size: 150%;
+  color: #fe4365; }
+
+figure figcaption:after {
+  content: " >";
+  font-size: 150%;
+  color: #fe4365; }
+
+/**
+ * Site Footer
+ */
+footer {
+  clear: both; }
+
+footer .signature {
+  text-align: center;
+  font-size: 85%;
+  color: #f8ccad; }
+
+/*# sourceMappingURL=frontend.css.map */
