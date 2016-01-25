@@ -145,6 +145,74 @@ header .post-title h1 {
   color: #1e1e1e !important; }
 
 /**
+ * Lead Generation
+ */
+.sml_subscribe {
+  text-align: center;
+  margin: 1em 0;
+  border: 2px solid #fe4365;
+  padding: .5em 0;
+  border-right: 0;
+  border-left: 0; }
+
+.sml_subscribe .highlight {
+  color: #1e1e1e; }
+
+.sml_subscribe .sml_thankyou {
+  color: #86af99;
+  margin: 1em 0; }
+
+.sml_subscribe .sml_error {
+  color: #fe4365;
+  margin: 1em 0; }
+
+.sml_subscribe .prepend {
+  font-size: 1.8em;
+  padding: 0 25%;
+  color: #fe4365; }
+
+.sml_subscribe .sml_name,
+.sml_subscribe .sml_email {
+  display: inline-block;
+  margin: 0 .5em;
+  vertical-align: middle; }
+
+.sml_subscribe .sml_nameinput,
+.sml_subscribe .sml_emailinput {
+  vertical-align: middle;
+  outline: none;
+  margin: -.5em 0 0 .5em;
+  border: 1px solid #86af99;
+  border-left: 0;
+  border-right: 0;
+  padding: .5em;
+  font-size: 1.5em;
+  color: #86af99;
+  background: transparent; }
+
+.sml_subscribe .sml_nameinput:focus,
+.sml_subscribe .sml_emailinput:focus {
+  background: white; }
+
+.sml_subscribe .sml_namelabel,
+.sml_subscribe .sml_emaillabel {
+  font-size: 2em;
+  color: #fe4365; }
+
+.sml_subscribe .sml_submit {
+  margin: 1em 0 0 0; }
+
+.sml_subscribe .sml_submit input {
+  text-transform: uppercase;
+  background: #fe4365;
+  color: white;
+  border-radius: 0;
+  outline: none; }
+
+.sml_subscribe .sml_submit input:hover {
+  background: #86af99; }
+
+/**
  * Site Content
  */
 .site-content {

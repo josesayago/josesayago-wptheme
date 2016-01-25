@@ -154,6 +154,74 @@ header .post-title h1 {
 	color: $carbon !important;
 }
 /**
+ * Lead Generation
+ */
+.sml_subscribe {
+	text-align: center;
+	margin: 1em 0;
+	border: 2px solid $header-bg-color;
+	padding: .5em 0;
+	border-right: 0;
+	border-left: 0;
+}
+.sml_subscribe .highlight {
+	color: $carbon;
+}
+.sml_subscribe .sml_thankyou {
+	color: $text-life-color;
+	margin: 1em 0;
+}
+.sml_subscribe .sml_error {
+	color: $header-bg-color;
+	margin: 1em 0;
+}
+.sml_subscribe .prepend {
+	font-size: 1.8em;
+	padding: 0 25%;
+	color: $header-bg-color;
+}
+.sml_subscribe .sml_name,
+.sml_subscribe .sml_email {
+	display: inline-block;
+	margin: 0 .5em;
+	vertical-align: middle;
+}
+.sml_subscribe .sml_nameinput,
+.sml_subscribe .sml_emailinput {
+	vertical-align: middle;
+	outline: none;
+	margin: -.5em 0 0 .5em;
+	border: 1px solid $text-life-color;
+	border-left: 0;
+	border-right: 0;
+	padding: .5em;
+	font-size: 1.5em;
+	color: $text-life-color;
+	background: transparent;
+}
+.sml_subscribe .sml_nameinput:focus,
+.sml_subscribe .sml_emailinput:focus {
+	background: $white;
+}
+.sml_subscribe .sml_namelabel,
+.sml_subscribe .sml_emaillabel {
+	font-size: 2em;
+	color: $header-bg-color;
+}
+.sml_subscribe .sml_submit {
+	margin: 1em 0 0 0;
+}
+.sml_subscribe .sml_submit input {
+	text-transform: uppercase;
+	background: $header-bg-color;
+	color: $white;
+	border-radius: 0;
+	outline: none;
+}
+.sml_subscribe .sml_submit input:hover {
+	background: $text-life-color;
+}
+/**
  * Site Content
  */
 .site-content {
