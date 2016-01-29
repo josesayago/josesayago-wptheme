@@ -6,7 +6,7 @@
  * @URL: http://josesayago.com
  * @Date:   2016-01-23 11:45:24
  * @Last Modified by:   Jose SAYAGO
- * @Last Modified time: 2016-01-25 17:29:13
+ * @Last Modified time: 2016-01-26 11:30:47
  * @File: index.php
  * @License: GLP v2
  */
@@ -15,23 +15,53 @@ get_header();
 
 <div class="site-content">
 
-<?php
-	$ctas = array(
-		__('<strong>Start making money online today</strong>. <span class="highlight">Get my best tricks in your email inbox.</span>','jls'),
-		__('<strong>Grow your online business</strong>. <span class="highlight">Get actionable advice in your inbox.</span>','jls'),
-		__('<strong>Increase your online sales</strong>. <span class="highlight">Get marketing tips in your email inbox.</span>','jls'),
-		__('<strong>Start selling online today</strong>. <span class="highlight">Get actionable advice in your inbox.</span>','jls')
-	);
-	$args = array(
-		'prepend' => $ctas[array_rand($ctas)],
-		'submittxt' => __('Join for Free','jls'),
-		'nametxt' => '<i class="glyphicon glyphicon-user"></i>',
-		'emailtxt' => '<i class="glyphicon glyphicon-envelope"></i>',
-		'thankyou'	=> __('Welcome aboard! Get ready to improve your business.','jls'),
-		'errormsg' => __('Oops! I could not recognize your email address. Please enter another one.','jls')
-	);
-	echo smlsubform($args); 
-?>
+	<div id="consulting-process">
+
+		<div class="process-header">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/layers.png" alt="How do I Work?" title="How do I Work?" />
+			<h2><?php echo __('My 5 Step Consultation Process', 'jls'); ?></h2>
+			<p><?php echo __('Based on the problem solving model by Edgar Schein','jls'); ?></p>
+		</div>
+
+		<div class="process-body">
+			<div class="row">
+				<div class="step1 pull-left">
+					<h3>1</h3>
+					<h4><?php echo __('Problem Definition','jls'); ?></h4>
+					<p><?php echo __('By having a <mark>sincere conversation</mark>, you help me identify root causes of problems you are facing.','jls'); ?></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="step2 pull-right">
+					<h3>2</h3>
+					<h4><?php echo __('Proposals','jls'); ?></h4>
+					<p><?php echo __('Based on the information given, <mark>I explore possible scenarios to address identified issues</mark>. It is possible that underlying problems are further revealed in this step.','jls'); ?></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="step3 pull-left">
+					<h3>3</h3>
+					<h4><?php echo __('Selection','jls'); ?></h4>
+					<p><?php echo __('We peer-review issued proposals, <mark>weigh pros and cons</mark>, forecasting consequences. Then select the most appropriate solution.','jls'); ?></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="step4 pull-right">
+					<h3>4</h3>
+					<h4><?php echo __('Planning','jls'); ?></h4>
+					<p><?php echo __('An <mark>action plan</mark> is developed to implement and execute the solution process.','jls'); ?></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="step5 pull-left">
+					<h3>5</h3>
+					<h4><?php echo __('Assessment','jls'); ?></h4>
+					<p><?php echo __('Finally you and I <mark>evaluate the results</mark>, analyze outcomes and determine if further actions are required.','jls'); ?></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 <?php
 	/*

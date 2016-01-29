@@ -6,7 +6,7 @@
  * @URL: http://josesayago.com
  * @Date:   2016-01-23 11:45:24
  * @Last Modified by:   Jose SAYAGO
- * @Last Modified time: 2016-01-25 08:22:14
+ * @Last Modified time: 2016-01-26 15:03:41
  * @File: page.php
  * @License: GLP v2
  */
@@ -20,8 +20,6 @@ get_header(); ?>
 		<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 	<?php endwhile; // End of the loop. ?>
-
-	<?php get_sidebar(); ?>
 
 </div>
 

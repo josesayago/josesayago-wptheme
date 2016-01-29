@@ -6,7 +6,7 @@
  * @URL: http://josesayago.com
  * @Date:   2016-01-23 11:45:24
  * @Last Modified by:   Jose SAYAGO
- * @Last Modified time: 2016-01-25 07:47:15
+ * @Last Modified time: 2016-01-26 14:10:20
  * @File: header.php
  * @License: GLP v2
  */
@@ -30,6 +30,12 @@ require_once('config.php');
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<div class="search-overlay hide">
+		<div class="search-overlay-content">
+			<span class="close-btn alignright"><i class="glyphicon glyphicon-remove"></i></span>
+			<?php get_search_form(true); ?>
+		</div>
+	</div>
 	<header>
 		<nav class="navbar navbar-default" role="navigation">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -91,18 +97,38 @@ require_once('config.php');
 	<div class="trusted-by">
 		<h2><?php echo __('Trusted By', 'jls'); ?></h2>
 		<ul class="client-logos">
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ula.png" alt="Universidad de Los Andes" title="Universidad de Los Andes" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/williamreed.png" alt="William-Reed Business Media" title="William-Reed Business Media" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eprcreations.png" alt="EPR Creations" title="EPR Creations" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wsi.png" alt="WSI Digital Marketing" title="WSI Digital Marketing" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fundacitemerida.png" alt="FUNDACITE Mérida" title="FUNDACITE Mérida" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sanando.png" alt="SANANDO Charity" title="SANANDO Charity" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/openworldconsultores.png" alt="Open World Consultores C.A" title="Open World Consultores C.A" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hendryluzardo.png" alt="Hendry Luzardo" title="Hendry Luzardo" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/insigno.png" alt="Insigno C.A" title="Insigno C.A" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/krenvictoria.png" alt="Karen Victoria Diseño Gráfico" title="Karen Victoria Diseño Gráfico" /></li>
-			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/altoimpactodigital.png" alt="Alto Impacto Digital C.A" title="Alto Impacto Digital C.A" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ula.png" alt="Universidad de Los Andes" title="Universidad de Los Andes" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/williamreed.png" alt="William-Reed Business Media" title="William-Reed Business Media" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ahomina.png" alt="AHOMINA All of Art" title="AHOMINA All of Art" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eprcreations.png" alt="EPR Creations" title="EPR Creations" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wsi.png" alt="WSI Digital Marketing" title="WSI Digital Marketing" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fundacitemerida.png" alt="FUNDACITE Mérida" title="FUNDACITE Mérida" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sanando.png" alt="SANANDO Charity" title="SANANDO Charity" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/openworldconsultores.png" alt="Open World Consultores C.A" title="Open World Consultores C.A" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hendryluzardo.png" alt="Hendry Luzardo" title="Hendry Luzardo" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/insigno.png" alt="Insigno C.A" title="Insigno C.A" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/jj-sayago.png" alt="JJ Sayago Diseñador Gráfico" title="JJ Sayago Diseñador Gráfico" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/krenvictoria.png" alt="Karen Victoria Diseño Gráfico" title="Karen Victoria Diseño Gráfico" /></li>
+			<li><img class="grayscale" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/altoimpactodigital.png" alt="Alto Impacto Digital C.A" title="Alto Impacto Digital C.A" /></li>
 		</ul>
+
+		<?php
+			$ctas = array(
+				__('<strong>Start making money online today</strong>. <span class="highlight">Get my best tricks in your email inbox.</span>','jls'),
+				__('<strong>Grow your online business</strong>. <span class="highlight">Get actionable advice in your inbox.</span>','jls'),
+				__('<strong>Increase your online sales</strong>. <span class="highlight">Get marketing tips in your email inbox.</span>','jls'),
+				__('<strong>Start selling online today</strong>. <span class="highlight">Get actionable advice in your inbox.</span>','jls')
+			);
+			$args = array(
+				'prepend' => $ctas[array_rand($ctas)],
+				'submittxt' => __('Join for Free','jls'),
+				'nametxt' => '<i class="glyphicon glyphicon-user"></i>',
+				'emailtxt' => '<i class="glyphicon glyphicon-envelope"></i>',
+				'thankyou'	=> __('Welcome aboard! Get ready to improve your business.','jls'),
+				'errormsg' => __('Oops! I could not recognize your email address. Please enter another one.','jls')
+			);
+			echo smlsubform($args); 
+		?>
 	</div>
 
 	<?php } ?>

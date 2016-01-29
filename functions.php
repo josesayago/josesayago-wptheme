@@ -6,7 +6,7 @@
  * @URL: http://josesayago.com
  * @Date:   2016-01-23 11:45:24
  * @Last Modified by:   Jose SAYAGO
- * @Last Modified time: 2016-01-23 19:46:16
+ * @Last Modified time: 2016-01-26 10:00:30
  * @File: functions.php
  * @License: GLP v2
  */
@@ -87,6 +87,7 @@ function jls_scripts()
 	wp_enqueue_script('typed', get_template_directory_uri().'/assets/js/typed.min.js', array('jquery'), '1.0.0', true);
 	wp_enqueue_script('typed-statement', get_template_directory_uri().'/assets/js/typed-statement.js', array('typed'), '1.0.0', true);
 	wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array(), '3.3.6', true);
+	wp_enqueue_script('search', get_template_directory_uri().'/assets/js/search.js', array('jquery'), '1.0.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'jls_scripts');
